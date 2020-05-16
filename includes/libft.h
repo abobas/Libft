@@ -6,7 +6,7 @@
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/15 21:14:01 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/16 15:43:51 by abobas        ########   odam.nl         */
+/*   Updated: 2020/05/16 17:48:15 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct		s_vector
 }					t_vector;
 
 char				*vector_get(t_vector *v, int index);
+char				*vector_return(t_vector *v, char *reference);
 int					vector_total(t_vector *v);
 int					vector_search(t_vector *v, char *reference, int bytes);
 void				vector_init(t_vector *v);

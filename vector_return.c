@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   vector_search.c                                    :+:    :+:            */
+/*   vector_return.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/05/16 00:49:41 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/16 17:46:29 by abobas        ########   odam.nl         */
+/*   Created: 2020/05/16 17:43:38 by abobas        #+#    #+#                 */
+/*   Updated: 2020/05/16 17:47:36 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		vector_search(t_vector *v, char *reference, int bytes)
+char	*vector_return(t_vector *v, char *reference)
 {
-	int		index;
-
-	index = 0;
-	while (index < v->total)
-	{
-		if (!ft_strncmp(v->data[index], reference, bytes))
-			return (index);
-		index++;
-	}
-	return (-1);
+	return (vector_get(v, vector_search(v, reference, ft_strlen(reference))));
 }
