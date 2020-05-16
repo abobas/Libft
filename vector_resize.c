@@ -6,7 +6,7 @@
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/15 23:53:44 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/16 02:17:10 by abobas        ########   odam.nl         */
+/*   Updated: 2020/05/16 15:35:31 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	vector_resize(t_vector *v, int capacity)
 	int		i;
 
 	i = 0;
-	new = (char**)malloc(sizeof(char*) * capacity);
+	new = (char**)malloc(sizeof(char*) * capacity + 1);
 	if (!new)
 		return ;
 	while (i < v->total)
@@ -29,6 +29,7 @@ void	vector_resize(t_vector *v, int capacity)
 			return ;
 		i++;
 	}
+	new[i] = 0;
 	vector_free(v);
 	v->data = new;
 	v->capacity = capacity;
