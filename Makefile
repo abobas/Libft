@@ -6,7 +6,7 @@
 #    By: abobas <abobas@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/05/15 21:54:45 by abobas        #+#    #+#                  #
-#    Updated: 2020/05/16 02:54:58 by abobas        ########   odam.nl          #
+#    Updated: 2020/05/16 15:45:56 by abobas        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ OBJ = 		ft_printf.o \
 			vector_set.o \
 			vector_total.o \
 			vector_populate.o \
-			vector_print.o
+			vector_print.o \
+			vector_debug.o
 
 FLAGS = -Wall -Werror -Wextra
 

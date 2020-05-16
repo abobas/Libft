@@ -6,7 +6,7 @@
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/15 21:14:01 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/16 03:16:06 by abobas        ########   odam.nl         */
+/*   Updated: 2020/05/16 15:43:51 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void				vector_init(t_vector *v);
 void				vector_resize(t_vector *v, int capacity);
 void				vector_populate(t_vector *v, char **source);
 void				vector_print(t_vector *v);
+void				vector_debug(t_vector *v);
 void				vector_free(t_vector *v);
 void				vector_add(t_vector *v, char *data);
 void				vector_set(t_vector *v, int index, char *data);
