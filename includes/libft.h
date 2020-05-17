@@ -6,7 +6,7 @@
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/15 21:14:01 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/16 17:48:15 by abobas        ########   odam.nl         */
+/*   Updated: 2020/05/17 14:58:09 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ typedef struct		s_vector
 }					t_vector;
 
 char				*vector_get(t_vector *v, int index);
-char				*vector_return(t_vector *v, char *reference);
 int					vector_total(t_vector *v);
-int					vector_search(t_vector *v, char *reference, int bytes);
+int					vector_search(t_vector *v, char *reference);
 void				vector_init(t_vector *v);
 void				vector_resize(t_vector *v, int capacity);
 void				vector_populate(t_vector *v, char **source);
@@ -37,6 +36,7 @@ void				vector_delete(t_vector *v, int index);
 char				*ft_strjoin(char *s1, char *s2);
 char				*ft_substr(char *str, int start, int length);
 char				*ft_strdup(char *str);
+char				*ft_strtrim(char *src, int n);
 char				*ft_realloc(char *src, int old_size, int new_size);
 char				*ft_readline(int fd, int buf_size);
 char				*ft_readfile(int fd, int buf_size);
