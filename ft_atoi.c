@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   vector_delete.c                                    :+:    :+:            */
+/*   ft_atoi.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: abobas <abobas@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/05/16 00:45:23 by abobas        #+#    #+#                 */
-/*   Updated: 2020/05/28 20:50:43 by abobas        ########   odam.nl         */
+/*   Created: 2020/05/29 17:45:08 by abobas        #+#    #+#                 */
+/*   Updated: 2020/05/29 17:45:13 by abobas        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
-#include <stdlib.h>
-
-void	vector_delete(t_vector *v, int index)
+int		ft_atoi(char *str)
 {
-	if (index < 0 || index >= v->total)
-		return ;
-	if (v->data[index])
-		free(v->data[index]);
-	while (index < v->total - 1)
+	int		i;
+	int		n;
+
+	i = 0;
+	n = 0;
+	while (str[i] != '\0')
 	{
-		v->data[index] = v->data[index + 1];
-		v->data[index + 1] = 0;
-		index++;
+		n = (n * 10) + (str[i] - '0');
+		i++;
 	}
-	v->total--;
+	return (n);
 }
